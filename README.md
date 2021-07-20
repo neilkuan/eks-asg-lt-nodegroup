@@ -1,1 +1,1 @@
-# replace this
+# eks-asg-lt-nodegroup

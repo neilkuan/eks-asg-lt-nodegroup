@@ -1,5 +1,9 @@
 {
   "name": "eks-asg-lt-nodegroup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilkuan/eks-asg-lt-nodegroup.git"
+  },
   "scripts": {
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
@@ -18,6 +22,11 @@
     "diff": "npx projen diff",
     "projen": "npx projen",
     "start": "npx projen start"
+  },
+  "author": {
+    "name": "Neil Kuan",
+    "email": "guan840912@gmail.com",
+    "organization": false
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
@@ -40,6 +49,10 @@
   },
   "dependencies": {
     "@aws-cdk/assert": "^1.95.2",
+    "@aws-cdk/aws-autoscaling": "^1.95.2",
+    "@aws-cdk/aws-ec2": "^1.95.2",
+    "@aws-cdk/aws-eks": "^1.95.2",
+    "@aws-cdk/aws-iam": "^1.95.2",
     "@aws-cdk/core": "^1.95.2"
   },
   "bundledDependencies": [],
