@@ -1,6 +1,6 @@
-const { AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
-const project = new AwsCdkTypeScriptApp({
-  cdkVersion: '1.95.2',
+const { awscdk } = require('projen');
+const project = new awscdk.AwsCdkTypeScriptApp({
+  cdkVersion: '1.139.0',
   defaultReleaseBranch: 'main',
   name: 'eks-asg-lt-nodegroup',
   authorName: 'Neil Kuan',
@@ -13,12 +13,11 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/core',
     '@aws-cdk/aws-autoscaling',
   ],
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve'],
-      secret: 'AUTOMATION_GITHUB_TOKEN',
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['neilkuan'],
