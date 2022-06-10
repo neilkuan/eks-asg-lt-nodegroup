@@ -25,5 +25,9 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   gitignore: [
     'cdk.context.json', 'cdk.out',
   ],
+  typescriptVersion: '4.6',
+  devDeps: [
+    '@types/prettier@2.6.0',
+  ],
 });
 project.synth();
